@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
 import { clinicInfo } from "@/lib/data/mockData";
 import Button from "@/components/ui/Button";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 
 export default function DgShippingBanner() {
   return (
@@ -24,7 +24,15 @@ export default function DgShippingBanner() {
             </Button>
           </div>
         </div>
-        <ImagePlaceholder label="DG SHIPPING MEDICAL EXAM" ratio="4:3" className="border-white/30 bg-white/5 text-white/70" />
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
+          <Image
+            src="/images/dg-shipping/dg-medical.png"
+            alt="DG Shipping Medical Examination"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       </div>
     </section>
   );

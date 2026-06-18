@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { ChevronDown, CheckCircle2, Stethoscope } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
@@ -39,7 +40,20 @@ export default async function ServiceDetailPage({ params }: Params) {
       <section className="px-4 py-16 md:px-8">
         <div className="mx-auto grid max-w-container gap-10 lg:grid-cols-[1fr_320px]">
           <div>
-            <ImagePlaceholder label={service.title.toUpperCase()} ratio="16:9" />
+            {service.image ? (
+              <div className="relative aspect-video overflow-hidden rounded-xl">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, calc(100vw - 380px)"
+                />
+              </div>
+            ) : (
+              <ImagePlaceholder label={service.title.toUpperCase()} ratio="16:9" />
+            )}
 
             <h2 className="mt-10 flex items-center gap-2 font-heading text-2xl font-bold text-textPrimary">
               <Stethoscope size={22} className="text-primary" /> Conditions Treated

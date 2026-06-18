@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { FlaskConical, Home, Clock, FileCheck } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 import CtaBand from "@/components/sections/CtaBand";
@@ -54,7 +54,15 @@ export default function LaboratoryPage() {
       <section className="bg-sectionBg px-4 py-16 md:px-8">
         <div className="mx-auto max-w-container">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <ImagePlaceholder label="LAB SAMPLE COLLECTION" ratio="4:3" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/images/laboratory/lab.png"
+                alt="Laboratory Sample Collection"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
             <div>
               <h2 className="font-heading text-2xl font-bold text-textPrimary md:text-3xl">Popular Tests</h2>
               <div className="mt-6 divide-y divide-border rounded-xl border border-border bg-cardBg">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { services } from "@/lib/data/mockData";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
@@ -25,7 +26,19 @@ export default function ServiceCardGrid({ limit }: { limit?: number }) {
               href={`/services/${s.slug}`}
               className="group rounded-xl border border-border bg-cardBg p-5 shadow-sm transition-shadow hover:shadow-md"
             >
-              <ImagePlaceholder label={s.title.toUpperCase()} ratio="4:3" />
+              {s.image ? (
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={s.image}
+                    alt={s.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  />
+                </div>
+              ) : (
+                <ImagePlaceholder label={s.title.toUpperCase()} ratio="4:3" />
+              )}
               <h3 className="mt-4 font-subheading font-semibold text-textPrimary group-hover:text-primary">{s.title}</h3>
               <p className="mt-2 text-sm text-textSecondary">{s.overview}</p>
             </Link>

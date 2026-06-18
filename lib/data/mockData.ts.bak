@@ -309,8 +309,8 @@ export const navLinks = [
 
 export const clinicInfo = {
   name: "Joy Family Multispeciality Clinic",
-  address: "#101/16, Golden Flats, Mogappair West, Chennai",
-  phones: ["+91 8778040424", "+91 99405 36765"],
+  address: "No. 10/4, Samiyar Thottam, Villivakkam, Chennai - 600 049",
+  phones: ["+91 8778040424", "+91 81222 77200"],
   email: "info@joyfmsclinic.com",
   whatsapp: "918778040424",
   hours: [

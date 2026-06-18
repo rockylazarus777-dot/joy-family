@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ShieldCheck, FileText, ListChecks } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
 import CtaBand from "@/components/sections/CtaBand";
 import DgShippingForm from "@/components/forms/DgShippingForm";
@@ -31,7 +31,15 @@ export default function DgShippingPage() {
 
       <section className="px-4 py-8 md:px-8">
         <div className="mx-auto grid max-w-container gap-10 lg:grid-cols-2 lg:items-center">
-          <ImagePlaceholder label="DG SHIPPING EXAMINATION ROOM" ratio="4:3" />
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+            <Image
+              src="/images/dg-shipping/dg-shipping-exam-room.jpg"
+              alt="DG Shipping Medical Examination Room"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
           <div>
             <h2 className="font-heading text-2xl font-bold text-textPrimary md:text-3xl">Seafarer Medical Fitness Examinations</h2>
             <p className="mt-3 text-textSecondary">

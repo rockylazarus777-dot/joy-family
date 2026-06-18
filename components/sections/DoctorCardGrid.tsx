@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { doctors } from "@/lib/data/mockData";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
@@ -25,7 +26,19 @@ export default function DoctorCardGrid({ limit }: { limit?: number }) {
               key={d.id}
               className="min-w-[260px] flex-shrink-0 rounded-xl border border-border bg-cardBg p-5 shadow-sm lg:min-w-0"
             >
-              <ImagePlaceholder label={`PHOTO: ${d.fullName.toUpperCase()}`} ratio="4:5" />
+              {d.image ? (
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+                  <Image
+                    src={d.image}
+                    alt={d.fullName}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 260px, (max-width: 1280px) 25vw, 280px"
+                  />
+                </div>
+              ) : (
+                <ImagePlaceholder label={`PHOTO: ${d.fullName.toUpperCase()}`} ratio="4:5" />
+              )}
               <h3 className="mt-4 font-subheading font-semibold text-textPrimary">{d.fullName}</h3>
               <p className="text-sm text-textSecondary">{d.qualification}</p>
               <p className="mt-1 text-sm font-medium text-accent">{d.specialization}</p>

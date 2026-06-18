@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Button from "@/components/ui/Button";
@@ -28,7 +29,19 @@ export default function DoctorsPage() {
               return (
                 <div key={d.id} className="rounded-xl border border-border bg-cardBg p-5 shadow-sm">
                   <Link href={`/doctors/${d.slug}`}>
-                    <ImagePlaceholder label={`PHOTO: ${d.fullName.toUpperCase()}`} ratio="4:5" />
+                    {d.image ? (
+                      <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+                        <Image
+                          src={d.image}
+                          alt={d.fullName}
+                          fill
+                          className="object-cover object-top"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+                    ) : (
+                      <ImagePlaceholder label={`PHOTO: ${d.fullName.toUpperCase()}`} ratio="4:5" />
+                    )}
                   </Link>
                   <Link href={`/doctors/${d.slug}`}>
                     <h2 className="mt-4 font-subheading font-semibold text-textPrimary hover:text-primary">{d.fullName}</h2>

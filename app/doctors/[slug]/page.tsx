@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { Clock, GraduationCap, Stethoscope } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
@@ -41,7 +42,20 @@ export default async function DoctorProfilePage({ params }: Params) {
       <section className="px-4 py-16 md:px-8">
         <div className="mx-auto grid max-w-container gap-10 lg:grid-cols-[320px_1fr]">
           <div>
-            <ImagePlaceholder label={`PHOTO: ${doctor.fullName.toUpperCase()}`} ratio="4:5" />
+            {doctor.image ? (
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
+                <Image
+                  src={doctor.image}
+                  alt={doctor.fullName}
+                  fill
+                  priority
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 320px"
+                />
+              </div>
+            ) : (
+              <ImagePlaceholder label={`PHOTO: ${doctor.fullName.toUpperCase()}`} ratio="4:5" />
+            )}
             <div className="mt-6 rounded-xl border border-border bg-cardBg p-5 shadow-sm">
               <p className="text-sm text-textSecondary">Qualification</p>
               <p className="font-subheading font-semibold text-textPrimary">{doctor.qualification}</p>

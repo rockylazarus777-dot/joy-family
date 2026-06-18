@@ -34,6 +34,7 @@ export type Doctor = {
   education: string[];
   conditionsTreated: string[];
   availability: DoctorAvailability[];
+  image?: string;
 };
 
 export const doctors: Doctor[] = [
@@ -58,6 +59,7 @@ export const doctors: Doctor[] = [
       { day: "Sat", slots: ["09:00–13:00"] },
       { day: "Sun", slots: [] },
     ],
+    image: "/images/doctors/Dr.afred.png",
   },
   {
     id: "d2",
@@ -80,6 +82,7 @@ export const doctors: Doctor[] = [
       { day: "Sat", slots: ["09:00–13:00"] },
       { day: "Sun", slots: [] },
     ],
+    image: "/images/doctors/Dr.hannah.png",
   },
   {
     id: "d3",
@@ -102,6 +105,7 @@ export const doctors: Doctor[] = [
       { day: "Sat", slots: ["09:00–13:00"] },
       { day: "Sun", slots: [] },
     ],
+    image: "/images/doctors/Dr.henry.png",
   },
 ];
 
@@ -119,6 +123,7 @@ export type Service = {
   faqs: ServiceFaq[];
   metaTitle: string;
   metaDescription: string;
+  image?: string;
 };
 
 export const services: Service[] = [
@@ -134,6 +139,7 @@ export const services: Service[] = [
     ],
     metaTitle: "ENT Care in Mogappair, Chennai | Joy Family Clinic",
     metaDescription: "Expert ENT diagnosis and treatment for sinusitis, hearing loss, vertigo and more, led by a specialist with 38 years of experience.",
+    image: "/images/services/ent care.png",
   },
   {
     id: "s2", slug: "family-medicine", title: "Family Medicine", departmentId: "family-medicine",
@@ -146,6 +152,7 @@ export const services: Service[] = [
     ],
     metaTitle: "Family Medicine Doctor in Mogappair | Joy Family Clinic",
     metaDescription: "Trusted family medicine care for everyday illness, chronic disease management and preventive checkups in Chennai.",
+    image: "/images/services/family.png",
   },
   {
     id: "s3", slug: "pain-management", title: "Pain Management", departmentId: "anaesthesia",
@@ -156,6 +163,7 @@ export const services: Service[] = [
     faqs: [{ q: "Do you treat chronic pain without surgery?", a: "Yes, many chronic pain conditions are managed effectively with medication and therapy." }],
     metaTitle: "Pain Management Specialist in Chennai | Joy Family Clinic",
     metaDescription: "Effective pain management for chronic back pain, joint pain, migraine and post-surgical recovery.",
+    image: "/images/services/pain.png",
   },
   {
     id: "s4", slug: "paediatric-care", title: "Paediatric Care", departmentId: "paediatrics",
@@ -166,6 +174,7 @@ export const services: Service[] = [
     faqs: [{ q: "Do you provide vaccination services?", a: "Yes, we follow the standard immunisation schedule for children." }],
     metaTitle: "Paediatric Care in Mogappair, Chennai | Joy Family Clinic",
     metaDescription: "Gentle, expert paediatric care including vaccination, growth monitoring and childhood illness treatment.",
+    image: "/images/services/paediatric.png",
   },
   {
     id: "s5", slug: "womens-health", title: "Women's Health", departmentId: "gynaecology",
@@ -176,17 +185,9 @@ export const services: Service[] = [
     faqs: [{ q: "Do you offer prenatal checkups?", a: "Yes, prenatal consultations and monitoring are available." }],
     metaTitle: "Women's Health & Gynaecology in Chennai | Joy Family Clinic",
     metaDescription: "Comprehensive gynaecological and maternal healthcare for women of all ages in Mogappair, Chennai.",
+    image: "/images/services/women.png",
   },
-  {
-    id: "s6", slug: "dental-care", title: "Dental Care", departmentId: "dental",
-    overview: "Preventive and restorative dentistry for all ages.",
-    conditionsTreated: ["Cavities", "Gum disease", "Tooth sensitivity", "Misalignment"],
-    procedures: ["Dental checkups", "Cleaning", "Fillings", "Extractions"],
-    benefits: ["Modern dental equipment", "Painless treatment approach"],
-    faqs: [{ q: "How often should I get a dental checkup?", a: "Every 6 months is recommended for most patients." }],
-    metaTitle: "Dental Clinic in Mogappair, Chennai | Joy Family Clinic",
-    metaDescription: "Preventive and restorative dental care for the whole family, from cleanings to fillings and extractions.",
-  },
+ 
   {
     id: "s7", slug: "diabetes-management", title: "Diabetes Management", departmentId: "diabetes",
     overview: "Personalised, lifelong diabetes & hormone care.",
@@ -196,6 +197,7 @@ export const services: Service[] = [
     faqs: [{ q: "Can diabetes be managed without insulin?", a: "Many cases are managed through diet, lifestyle, and oral medication, depending on severity." }],
     metaTitle: "Diabetes & Endocrinology Care in Chennai | Joy Family Clinic",
     metaDescription: "Personalised diabetes and hormone management with long-term monitoring and lab integration.",
+    image: "/images/services/diabetes.png",
   },
   {
     id: "s8", slug: "orthopaedic-care", title: "Orthopaedic Care", departmentId: "orthopaedics",
@@ -206,6 +208,7 @@ export const services: Service[] = [
     faqs: [{ q: "Do you treat sports injuries?", a: "Yes, including sprains, strains, and minor fractures." }],
     metaTitle: "Orthopaedic Care in Mogappair, Chennai | Joy Family Clinic",
     metaDescription: "Expert care for fractures, arthritis, sports injuries and chronic joint pain.",
+    image: "/images/services/orthopaedic.png",
   },
   {
     id: "s9", slug: "skin-care", title: "Skin & Hair Care", departmentId: "dermatology",
@@ -216,6 +219,7 @@ export const services: Service[] = [
     faqs: [{ q: "Do you treat hair loss?", a: "Yes, we evaluate and treat various causes of hair loss." }],
     metaTitle: "Dermatology & Skin Care in Chennai | Joy Family Clinic",
     metaDescription: "Medical and cosmetic dermatology services for acne, eczema, hair loss and pigmentation.",
+    image: "/images/services/skin.png",
   },
   {
     id: "s10", slug: "minor-surgery", title: "Minor Surgical Procedures", departmentId: "general-surgery",
@@ -226,6 +230,7 @@ export const services: Service[] = [
     faqs: [{ q: "Is anaesthesia required for minor surgery?", a: "Local anaesthesia is typically used for minor procedures." }],
     metaTitle: "Minor Surgical Procedures in Chennai | Joy Family Clinic",
     metaDescription: "Safe day-care surgical procedures for cysts, abscesses, minor wounds and more.",
+    image: "/images/services/minor surgery.png",
   },
 ];
 
@@ -299,7 +304,6 @@ export const navLinks = [
   { label: "Doctors", href: "/doctors" },
   { label: "Services", href: "/services" },
   { label: "Laboratory", href: "/laboratory" },
-  { label: "Pharmacy", href: "/pharmacy" },
   { label: "Health Packages", href: "/health-packages" },
   { label: "DG Shipping", href: "/dg-shipping-medical-examination" },
   { label: "Gallery", href: "/gallery" },
@@ -309,8 +313,8 @@ export const navLinks = [
 
 export const clinicInfo = {
   name: "Joy Family Multispeciality Clinic",
-  address: "#101/16, Golden Flats, Mogappair West, Chennai",
-  phones: ["+91 8778040424", "+91 99405 36765"],
+  address: "No. 10/4, Samiyar Thottam, Villivakkam, Chennai - 600 049",
+  phones: ["+91 8778040424", "+91 81222 77200"],
   email: "info@joyfmsclinic.com",
   whatsapp: "918778040424",
   hours: [
@@ -323,9 +327,31 @@ export const clinicInfo = {
   mapEmbedUrl: "https://maps.google.com/maps?q=Mogappair%20West%2C%20Chennai&output=embed",
 };
 
-export const heroSlides = [
+// Section-level images — update each path when the image is uploaded
+export const sectionImages = {
+  lab: "",           // → /images/laboratory/lab-main.jpg
+  pharmacy: "",      // → /images/pharmacy/pharmacy-main.jpg
+  aboutTeam: "",     // → /images/about/clinic-team.jpg
+  dgShipping: "",    // → /images/facility/dg-shipping-exam.jpg
+};
+
+export type HeroSlide = {
+  id: number;
+  image: string;
+  mobileImage: string;
+  tag: string;
+  title: string;
+  subtitle: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta: { label: string; href: string };
+};
+
+export const heroSlides: HeroSlide[] = [
   {
     id: 1,
+    image: "/images/hero/slide 1.png",
+    mobileImage: "/images/hero/slide 1 mob.png",
+    tag: "Multispeciality Care",
     title: "Premium Family Healthcare, Trusted for 38 Years",
     subtitle: "Multispeciality care for every member of your family, under one roof.",
     primaryCta: { label: "Book Appointment", href: "/book-appointment" },
@@ -333,6 +359,9 @@ export const heroSlides = [
   },
   {
     id: 2,
+    image: "/images/hero/slide 2.png",
+    mobileImage: "/images/hero/slide 2 mob.png",
+    tag: "Diagnostics",
     title: "NABL-Certified Laboratory Diagnostics",
     subtitle: "Accurate results, fast turnaround, with home collection available.",
     primaryCta: { label: "Book Lab Test", href: "/laboratory" },
@@ -340,6 +369,9 @@ export const heroSlides = [
   },
   {
     id: 3,
+    image: "/images/hero/slide 3.png",
+    mobileImage: "/images/hero/slide 3 mob.png",
+    tag: "DG Shipping Medical",
     title: "DG Shipping Approved Medical Examination Centre",
     subtitle: "Seafarer medical examinations conducted to MLC 2006 & STCW standards.",
     primaryCta: { label: "Book Seafarer Exam", href: "/dg-shipping-medical-examination" },
@@ -457,19 +489,20 @@ export type GalleryItem = {
   id: string;
   category: "Clinic" | "Doctors" | "Laboratory" | "Facilities" | "Events";
   label: string;
+  image?: string;
 };
 
 export const galleryItems: GalleryItem[] = [
-  { id: "g1", category: "Clinic", label: "RECEPTION AREA" },
-  { id: "g2", category: "Clinic", label: "WAITING LOUNGE" },
-  { id: "g3", category: "Doctors", label: "CONSULTATION ROOM" },
-  { id: "g4", category: "Doctors", label: "DR. ALFRED BARNABAS AT WORK" },
-  { id: "g5", category: "Laboratory", label: "DIAGNOSTIC LAB" },
-  { id: "g6", category: "Laboratory", label: "SAMPLE COLLECTION DESK" },
-  { id: "g7", category: "Facilities", label: "PHARMACY COUNTER" },
-  { id: "g8", category: "Facilities", label: "CLINIC EXTERIOR" },
-  { id: "g9", category: "Events", label: "HEALTH AWARENESS CAMP" },
-  { id: "g10", category: "Events", label: "COMMUNITY VACCINATION DRIVE" },
-  { id: "g11", category: "Clinic", label: "CHILDREN'S CORNER" },
-  { id: "g12", category: "Facilities", label: "DG SHIPPING EXAMINATION ROOM" },
+  { id: "g1",  category: "Clinic",      label: "RECEPTION AREA",                image: "" },
+  { id: "g2",  category: "Clinic",      label: "WAITING LOUNGE",                image: "" },
+  { id: "g3",  category: "Doctors",     label: "CONSULTATION ROOM",             image: "" },
+  { id: "g4",  category: "Doctors",     label: "DR. ALFRED BARNABAS AT WORK",   image: "" },
+  { id: "g5",  category: "Laboratory",  label: "DIAGNOSTIC LAB",                image: "" },
+  { id: "g6",  category: "Laboratory",  label: "SAMPLE COLLECTION DESK",        image: "" },
+  { id: "g7",  category: "Facilities",  label: "PHARMACY COUNTER",              image: "" },
+  { id: "g8",  category: "Facilities",  label: "CLINIC EXTERIOR",               image: "" },
+  { id: "g9",  category: "Events",      label: "HEALTH AWARENESS CAMP",         image: "" },
+  { id: "g10", category: "Events",      label: "COMMUNITY VACCINATION DRIVE",   image: "" },
+  { id: "g11", category: "Clinic",      label: "CHILDREN'S CORNER",             image: "" },
+  { id: "g12", category: "Facilities",  label: "DG SHIPPING EXAMINATION ROOM",  image: "" },
 ];
