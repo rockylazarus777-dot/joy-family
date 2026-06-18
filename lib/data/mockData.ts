@@ -1,0 +1,475 @@
+export type Department = {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  icon: string;
+};
+
+export const departments: Department[] = [
+  { id: "ent", name: "ENT", slug: "ent", description: "Ear, nose & throat care for all ages.", icon: "Ear" },
+  { id: "family-medicine", name: "Family Medicine", slug: "family-medicine", description: "General medicine for the whole family.", icon: "HeartPulse" },
+  { id: "anaesthesia", name: "Anaesthesia & Pain Management", slug: "anaesthesia", description: "Pre-surgical and chronic pain care.", icon: "Syringe" },
+  { id: "paediatrics", name: "Paediatrics", slug: "paediatrics", description: "Child health & vaccination.", icon: "Baby" },
+  { id: "gynaecology", name: "Gynaecology", slug: "gynaecology", description: "Women's health at every stage of life.", icon: "Flower2" },
+  { id: "dental", name: "Dental Care", slug: "dental", description: "Complete dental & oral health services.", icon: "Smile" },
+  { id: "diabetes", name: "Diabetes & Endocrinology", slug: "diabetes", description: "Lifelong management of diabetes & hormones.", icon: "Activity" },
+  { id: "orthopaedics", name: "Orthopaedics", slug: "orthopaedics", description: "Bone, joint & sports injury care.", icon: "Bone" },
+  { id: "dermatology", name: "Dermatology", slug: "dermatology", description: "Skin, hair & cosmetic dermatology.", icon: "Sparkles" },
+  { id: "general-surgery", name: "General Surgery", slug: "general-surgery", description: "Day-care & minor surgical procedures.", icon: "Stethoscope" },
+];
+
+export type DoctorAvailability = { day: string; slots: string[] };
+
+export type Doctor = {
+  id: string;
+  slug: string;
+  fullName: string;
+  qualification: string;
+  specialization: string;
+  departmentId: string;
+  experienceYears: number;
+  languages: string[];
+  bio: string;
+  education: string[];
+  conditionsTreated: string[];
+  availability: DoctorAvailability[];
+};
+
+export const doctors: Doctor[] = [
+  {
+    id: "d1",
+    slug: "dr-k-alfred-barnabas",
+    fullName: "Dr. K. Alfred Barnabas",
+    qualification: "MBBS, DLO",
+    specialization: "ENT Specialist",
+    departmentId: "ent",
+    experienceYears: 38,
+    languages: ["English", "Tamil", "Hindi"],
+    bio: "Dr. K. Alfred Barnabas has spent 38 years treating ear, nose and throat conditions across all age groups, combining decades of clinical experience with a calm, family-first approach to care.",
+    education: ["MBBS — Madras Medical College", "DLO — Otolaryngology"],
+    conditionsTreated: ["Chronic sinusitis", "Tonsillitis", "Hearing loss", "Vertigo", "Allergic rhinitis", "Ear infections"],
+    availability: [
+      { day: "Mon", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Tue", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Wed", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Thu", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Fri", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Sat", slots: ["09:00–13:00"] },
+      { day: "Sun", slots: [] },
+    ],
+  },
+  {
+    id: "d2",
+    slug: "dr-hannah-alfred",
+    fullName: "Dr. Hannah Alfred",
+    qualification: "MBBS, MD",
+    specialization: "Family Medicine",
+    departmentId: "family-medicine",
+    experienceYears: 35,
+    languages: ["English", "Tamil"],
+    bio: "Dr. Hannah Alfred has been the trusted family physician for thousands of households in Mogappair for over three decades, offering attentive, continuous care across every life stage.",
+    education: ["MBBS — Stanley Medical College", "MD — General Medicine"],
+    conditionsTreated: ["Fever & infections", "Hypertension", "Diabetes", "Thyroid disorders", "Preventive checkups"],
+    availability: [
+      { day: "Mon", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Tue", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Wed", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Thu", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Fri", slots: ["09:00–13:00", "18:00–21:00"] },
+      { day: "Sat", slots: ["09:00–13:00"] },
+      { day: "Sun", slots: [] },
+    ],
+  },
+  {
+    id: "d3",
+    slug: "dr-henry-prabhu-alfred",
+    fullName: "Dr. Henry Prabhu Alfred",
+    qualification: "MBBS, MD (Anaesthesia)",
+    specialization: "Anaesthesia & Pain Management",
+    departmentId: "anaesthesia",
+    experienceYears: 5,
+    languages: ["English", "Tamil"],
+    bio: "Dr. Henry Prabhu Alfred brings modern pain-management techniques and pre-surgical anaesthesia expertise, helping patients manage acute and chronic pain safely and effectively.",
+    education: ["MBBS — Christian Medical College", "MD — Anaesthesiology"],
+    conditionsTreated: ["Chronic back pain", "Post-surgical pain", "Joint pain", "Migraine", "Pre-anaesthetic evaluation"],
+    availability: [
+      { day: "Mon", slots: ["18:00–21:00"] },
+      { day: "Tue", slots: ["18:00–21:00"] },
+      { day: "Wed", slots: ["18:00–21:00"] },
+      { day: "Thu", slots: ["18:00–21:00"] },
+      { day: "Fri", slots: ["18:00–21:00"] },
+      { day: "Sat", slots: ["09:00–13:00"] },
+      { day: "Sun", slots: [] },
+    ],
+  },
+];
+
+export type ServiceFaq = { q: string; a: string };
+
+export type Service = {
+  id: string;
+  slug: string;
+  title: string;
+  departmentId: string;
+  overview: string;
+  conditionsTreated: string[];
+  procedures: string[];
+  benefits: string[];
+  faqs: ServiceFaq[];
+  metaTitle: string;
+  metaDescription: string;
+};
+
+export const services: Service[] = [
+  {
+    id: "s1", slug: "ent-care", title: "ENT Care", departmentId: "ent",
+    overview: "Comprehensive ear, nose and throat diagnosis and treatment for all age groups.",
+    conditionsTreated: ["Sinusitis", "Tonsillitis", "Hearing loss", "Vertigo", "Allergic rhinitis"],
+    procedures: ["Microscopic ear examination", "Endoscopic nasal evaluation", "Hearing assessment", "Tonsillectomy referral"],
+    benefits: ["Same-day consultation", "38 years of specialist experience", "Family-friendly approach"],
+    faqs: [
+      { q: "When should I see an ENT specialist?", a: "If you experience persistent ear pain, hearing changes, chronic sinus issues, or recurring throat infections." },
+      { q: "Is hearing testing available on-site?", a: "Yes, basic hearing assessments are available during your consultation." },
+    ],
+    metaTitle: "ENT Care in Mogappair, Chennai | Joy Family Clinic",
+    metaDescription: "Expert ENT diagnosis and treatment for sinusitis, hearing loss, vertigo and more, led by a specialist with 38 years of experience.",
+  },
+  {
+    id: "s2", slug: "family-medicine", title: "Family Medicine", departmentId: "family-medicine",
+    overview: "Everyday healthcare for every member of your family, from children to seniors.",
+    conditionsTreated: ["Fever & infections", "Hypertension", "Diabetes", "Thyroid disorders"],
+    procedures: ["General checkups", "Chronic disease management", "Preventive screening"],
+    benefits: ["One doctor for the whole family", "35 years of trusted care", "Flexible evening hours"],
+    faqs: [
+      { q: "Can the whole family see the same doctor?", a: "Yes, our family medicine specialist treats patients of all ages." },
+    ],
+    metaTitle: "Family Medicine Doctor in Mogappair | Joy Family Clinic",
+    metaDescription: "Trusted family medicine care for everyday illness, chronic disease management and preventive checkups in Chennai.",
+  },
+  {
+    id: "s3", slug: "pain-management", title: "Pain Management", departmentId: "anaesthesia",
+    overview: "Relief from acute and chronic pain conditions using modern techniques.",
+    conditionsTreated: ["Chronic back pain", "Joint pain", "Migraine", "Post-surgical pain"],
+    procedures: ["Pain assessment", "Medication management", "Pre-anaesthetic evaluation"],
+    benefits: ["Modern pain-relief techniques", "Personalised treatment plans"],
+    faqs: [{ q: "Do you treat chronic pain without surgery?", a: "Yes, many chronic pain conditions are managed effectively with medication and therapy." }],
+    metaTitle: "Pain Management Specialist in Chennai | Joy Family Clinic",
+    metaDescription: "Effective pain management for chronic back pain, joint pain, migraine and post-surgical recovery.",
+  },
+  {
+    id: "s4", slug: "paediatric-care", title: "Paediatric Care", departmentId: "paediatrics",
+    overview: "Gentle, expert care for infants, children & teens.",
+    conditionsTreated: ["Childhood infections", "Growth concerns", "Vaccination", "Allergies"],
+    procedures: ["Routine checkups", "Vaccination schedules", "Growth monitoring"],
+    benefits: ["Child-friendly environment", "Experienced paediatric care"],
+    faqs: [{ q: "Do you provide vaccination services?", a: "Yes, we follow the standard immunisation schedule for children." }],
+    metaTitle: "Paediatric Care in Mogappair, Chennai | Joy Family Clinic",
+    metaDescription: "Gentle, expert paediatric care including vaccination, growth monitoring and childhood illness treatment.",
+  },
+  {
+    id: "s5", slug: "womens-health", title: "Women's Health", departmentId: "gynaecology",
+    overview: "Comprehensive gynaecological & maternal care for women at every life stage.",
+    conditionsTreated: ["Menstrual disorders", "PCOS", "Prenatal care", "Menopause management"],
+    procedures: ["Gynaecological checkups", "Prenatal monitoring", "Ultrasound referral"],
+    benefits: ["Private, comfortable consultations", "Female-focused care team"],
+    faqs: [{ q: "Do you offer prenatal checkups?", a: "Yes, prenatal consultations and monitoring are available." }],
+    metaTitle: "Women's Health & Gynaecology in Chennai | Joy Family Clinic",
+    metaDescription: "Comprehensive gynaecological and maternal healthcare for women of all ages in Mogappair, Chennai.",
+  },
+  {
+    id: "s6", slug: "dental-care", title: "Dental Care", departmentId: "dental",
+    overview: "Preventive and restorative dentistry for all ages.",
+    conditionsTreated: ["Cavities", "Gum disease", "Tooth sensitivity", "Misalignment"],
+    procedures: ["Dental checkups", "Cleaning", "Fillings", "Extractions"],
+    benefits: ["Modern dental equipment", "Painless treatment approach"],
+    faqs: [{ q: "How often should I get a dental checkup?", a: "Every 6 months is recommended for most patients." }],
+    metaTitle: "Dental Clinic in Mogappair, Chennai | Joy Family Clinic",
+    metaDescription: "Preventive and restorative dental care for the whole family, from cleanings to fillings and extractions.",
+  },
+  {
+    id: "s7", slug: "diabetes-management", title: "Diabetes Management", departmentId: "diabetes",
+    overview: "Personalised, lifelong diabetes & hormone care.",
+    conditionsTreated: ["Type 1 & 2 diabetes", "Thyroid disorders", "Hormonal imbalance"],
+    procedures: ["Blood sugar monitoring", "Diet & lifestyle planning", "Medication management"],
+    benefits: ["Long-term care relationship", "Lab integration for fast monitoring"],
+    faqs: [{ q: "Can diabetes be managed without insulin?", a: "Many cases are managed through diet, lifestyle, and oral medication, depending on severity." }],
+    metaTitle: "Diabetes & Endocrinology Care in Chennai | Joy Family Clinic",
+    metaDescription: "Personalised diabetes and hormone management with long-term monitoring and lab integration.",
+  },
+  {
+    id: "s8", slug: "orthopaedic-care", title: "Orthopaedic Care", departmentId: "orthopaedics",
+    overview: "Bone, joint, and sports injury treatment.",
+    conditionsTreated: ["Fractures", "Arthritis", "Sports injuries", "Back pain"],
+    procedures: ["Joint assessment", "X-ray referral", "Physiotherapy guidance"],
+    benefits: ["Comprehensive bone & joint care", "Sports injury expertise"],
+    faqs: [{ q: "Do you treat sports injuries?", a: "Yes, including sprains, strains, and minor fractures." }],
+    metaTitle: "Orthopaedic Care in Mogappair, Chennai | Joy Family Clinic",
+    metaDescription: "Expert care for fractures, arthritis, sports injuries and chronic joint pain.",
+  },
+  {
+    id: "s9", slug: "skin-care", title: "Skin & Hair Care", departmentId: "dermatology",
+    overview: "Medical and cosmetic dermatology services.",
+    conditionsTreated: ["Acne", "Eczema", "Hair loss", "Pigmentation"],
+    procedures: ["Skin assessment", "Treatment planning", "Cosmetic consultation"],
+    benefits: ["Modern dermatology approach", "Both medical & cosmetic care"],
+    faqs: [{ q: "Do you treat hair loss?", a: "Yes, we evaluate and treat various causes of hair loss." }],
+    metaTitle: "Dermatology & Skin Care in Chennai | Joy Family Clinic",
+    metaDescription: "Medical and cosmetic dermatology services for acne, eczema, hair loss and pigmentation.",
+  },
+  {
+    id: "s10", slug: "minor-surgery", title: "Minor Surgical Procedures", departmentId: "general-surgery",
+    overview: "Safe, day-care surgical procedures.",
+    conditionsTreated: ["Cysts", "Abscesses", "Minor wounds", "Lipomas"],
+    procedures: ["Day-care surgery", "Wound care", "Post-operative follow-up"],
+    benefits: ["Safe, sterile facility", "Same-day discharge for most procedures"],
+    faqs: [{ q: "Is anaesthesia required for minor surgery?", a: "Local anaesthesia is typically used for minor procedures." }],
+    metaTitle: "Minor Surgical Procedures in Chennai | Joy Family Clinic",
+    metaDescription: "Safe day-care surgical procedures for cysts, abscesses, minor wounds and more.",
+  },
+];
+
+export type HealthPackage = {
+  id: string;
+  slug: string;
+  title: string;
+  price: number;
+  testsCount: number;
+  description: string;
+  benefits: string[];
+  testsIncluded: string[];
+  eligibility: string;
+};
+
+export const healthPackages: HealthPackage[] = [
+  {
+    id: "p1", slug: "basic-wellness", title: "Basic Wellness Checkup", price: 999, testsCount: 25,
+    description: "Essential screening for everyday health.",
+    benefits: ["Quick turnaround", "Covers core vitals", "Ideal for annual checkups"],
+    testsIncluded: ["Complete blood count", "Blood sugar (fasting)", "Lipid profile", "Urine routine"],
+    eligibility: "Recommended for adults 18+ with no major pre-existing conditions.",
+  },
+  {
+    id: "p2", slug: "complete-body-checkup", title: "Complete Body Checkup", price: 2499, testsCount: 60,
+    description: "Comprehensive screening across all major organs.",
+    benefits: ["Full-body organ screening", "Includes imaging referral", "Doctor consultation included"],
+    testsIncluded: ["Liver function test", "Kidney function test", "Thyroid profile", "Lipid profile", "Chest X-ray referral"],
+    eligibility: "Recommended for adults 30+ or those due for a comprehensive checkup.",
+  },
+  {
+    id: "p3", slug: "womens-wellness", title: "Women's Wellness Package", price: 1799, testsCount: 40,
+    description: "Designed for women's specific health needs.",
+    benefits: ["Hormone panel included", "Bone health screening", "Gynaecology consultation"],
+    testsIncluded: ["Thyroid profile", "Iron studies", "Vitamin D & B12", "Pap smear referral"],
+    eligibility: "Recommended for women 18+, especially those planning pregnancy or in menopause.",
+  },
+  {
+    id: "p4", slug: "senior-citizen-checkup", title: "Senior Citizen Checkup", price: 2999, testsCount: 55,
+    description: "Tailored screening for ages 60+.",
+    benefits: ["Cardiac risk screening", "Bone density referral", "Specialist consultation included"],
+    testsIncluded: ["ECG", "Lipid profile", "HbA1c", "Kidney function test", "Vitamin D"],
+    eligibility: "Recommended for adults aged 60 and above.",
+  },
+  {
+    id: "p5", slug: "cardiac-risk-checkup", title: "Cardiac Risk Checkup", price: 1999, testsCount: 35,
+    description: "Early detection of cardiovascular risk factors.",
+    benefits: ["ECG included", "Lipid & cholesterol panel", "Cardiologist referral if needed"],
+    testsIncluded: ["ECG", "Lipid profile", "Blood pressure assessment", "Blood sugar (fasting)"],
+    eligibility: "Recommended for adults with family history of heart disease or risk factors.",
+  },
+];
+
+export type Testimonial = {
+  id: string;
+  patientName: string;
+  occupation: string;
+  quote: string;
+  doctorId?: string;
+};
+
+export const testimonials: Testimonial[] = [
+  { id: "t1", patientName: "John D.", occupation: "Professor", quote: "38 years of trusted care — the doctors here treat you like family, not just a patient.", doctorId: "d1" },
+  { id: "t2", patientName: "Sarah", occupation: "Housewife", quote: "The whole family comes here. Booking and follow-ups are always smooth and quick.", doctorId: "d2" },
+  { id: "t3", patientName: "Maheshwaran", occupation: "Businessman", quote: "Professional, on-time, and the lab reports come back fast. Highly recommended." },
+];
+
+export const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Doctors", href: "/doctors" },
+  { label: "Services", href: "/services" },
+  { label: "Laboratory", href: "/laboratory" },
+  { label: "Pharmacy", href: "/pharmacy" },
+  { label: "Health Packages", href: "/health-packages" },
+  { label: "DG Shipping", href: "/dg-shipping-medical-examination" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+];
+
+export const clinicInfo = {
+  name: "Joy Family Multispeciality Clinic",
+  address: "#101/16, Golden Flats, Mogappair West, Chennai",
+  phones: ["+91 8778040424", "+91 99405 36765"],
+  email: "info@joyfmsclinic.com",
+  whatsapp: "918778040424",
+  hours: [
+    { day: "Mon – Sat", time: "9:00 AM – 1:00 PM, 6:00 PM – 9:00 PM" },
+    { day: "Sunday", time: "Holiday" },
+  ],
+  yearsExperience: 38,
+  happyPatients: "6,930+",
+  dgShippingApprovalNo: "TN/CH/43/2022",
+  mapEmbedUrl: "https://maps.google.com/maps?q=Mogappair%20West%2C%20Chennai&output=embed",
+};
+
+export const heroSlides = [
+  {
+    id: 1,
+    title: "Premium Family Healthcare, Trusted for 38 Years",
+    subtitle: "Multispeciality care for every member of your family, under one roof.",
+    primaryCta: { label: "Book Appointment", href: "/book-appointment" },
+    secondaryCta: { label: "WhatsApp Us", href: "https://wa.me/918778040424" },
+  },
+  {
+    id: 2,
+    title: "NABL-Certified Laboratory Diagnostics",
+    subtitle: "Accurate results, fast turnaround, with home collection available.",
+    primaryCta: { label: "Book Lab Test", href: "/laboratory" },
+    secondaryCta: { label: "View Packages", href: "/health-packages" },
+  },
+  {
+    id: 3,
+    title: "DG Shipping Approved Medical Examination Centre",
+    subtitle: "Seafarer medical examinations conducted to MLC 2006 & STCW standards.",
+    primaryCta: { label: "Book Seafarer Exam", href: "/dg-shipping-medical-examination" },
+    secondaryCta: { label: "Learn More", href: "/dg-shipping-medical-examination" },
+  },
+];
+
+export const faqs = [
+  { q: "Do I need to book an appointment in advance?", a: "Walk-ins are welcome, but booking online or via WhatsApp guarantees you a fixed time slot and shorter wait." },
+  { q: "Do you offer home collection for lab tests?", a: "Yes, home collection is available for most lab tests across Mogappair and nearby areas." },
+  { q: "Is the DG Shipping medical examination approved?", a: `Yes, our centre holds DG Shipping Approval No. ${"TN/CH/43/2022"} and follows MLC 2006 / STCW standards.` },
+  { q: "What are your clinic hours?", a: "Monday to Saturday, 9:00 AM – 1:00 PM and 6:00 PM – 9:00 PM. Closed on Sundays." },
+  { q: "Can I consult a specialist without a referral?", a: "Yes, you can directly book with any of our specialists without a referral." },
+];
+
+export const dgShippingFaqs = [
+  { q: "Who needs a DG Shipping medical examination?", a: "All seafarers — pre-sea candidates, post-sea renewals, and trainees — require this examination as per DG Shipping regulations." },
+  { q: "How long is the certificate valid?", a: "Typically 1–2 years depending on the candidate's age and category, as per MLC 2006 guidelines." },
+  { q: "What documents should I bring?", a: "A valid photo ID, previous medical certificate (if renewal), and CDC/INDOS number where applicable." },
+  { q: "How soon will I get my report?", a: "Most reports are issued the same evening, subject to all tests being completed." },
+];
+
+export const dgShippingDocuments = [
+  "Valid government photo ID (Passport/Aadhar)",
+  "Previous medical fitness certificate (for renewals)",
+  "CDC / INDOS number (if applicable)",
+  "Passport-size photographs (2)",
+  "Company sponsorship letter (if applicable)",
+];
+
+export const dgShippingProcessSteps = [
+  "Registration & document verification",
+  "Vision & hearing test",
+  "Blood pressure & ECG",
+  "Blood & urine sample collection",
+  "Chest X-ray",
+  "Spirometry (lung function)",
+  "Physical & dental examination",
+  "Final medical officer evaluation",
+];
+
+export type BlogCategory = { id: string; name: string; slug: string };
+
+export const blogCategories: BlogCategory[] = [
+  { id: "bc1", name: "Family Health", slug: "family-health" },
+  { id: "bc2", name: "Preventive Care", slug: "preventive-care" },
+  { id: "bc3", name: "Seafarer Health", slug: "seafarer-health" },
+];
+
+export type Blog = {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  body: string[];
+  categoryId: string;
+  authorDoctorId: string;
+  publishedAt: string;
+  metaTitle: string;
+  metaDescription: string;
+};
+
+export const blogs: Blog[] = [
+  {
+    id: "b1",
+    slug: "5-signs-you-should-see-an-ent-specialist",
+    title: "5 Signs You Should See an ENT Specialist",
+    excerpt: "Persistent sinus issues or hearing changes? Here's when it's time to book an ENT consultation.",
+    body: [
+      "Many ENT conditions are dismissed as minor colds or allergies, but persistent symptoms often signal something that needs specialist attention.",
+      "Recurring ear infections, chronic sinus congestion lasting more than 10 days, sudden hearing changes, persistent sore throat, and ongoing vertigo or balance issues are all signs worth getting checked.",
+      "Early diagnosis leads to faster, simpler treatment — don't wait for symptoms to worsen before booking a consultation.",
+    ],
+    categoryId: "bc1",
+    authorDoctorId: "d1",
+    publishedAt: "2026-05-12",
+    metaTitle: "5 Signs You Should See an ENT Specialist | Joy Family Clinic Blog",
+    metaDescription: "Learn the warning signs that mean it's time to book an ENT consultation, from chronic sinus issues to sudden hearing loss.",
+  },
+  {
+    id: "b2",
+    slug: "why-annual-health-checkups-matter",
+    title: "Why Annual Health Checkups Matter at Every Age",
+    excerpt: "Preventive checkups catch problems before they become serious. Here's what to expect at every age.",
+    body: [
+      "Annual health checkups are one of the simplest ways to catch potential health issues before they become serious problems.",
+      "For adults in their 20s and 30s, a basic wellness panel covering blood sugar, cholesterol, and blood pressure is a good baseline. From 40 onwards, more comprehensive screening including thyroid and cardiac risk markers becomes important.",
+      "Our health packages are designed around these life stages, making it easy to choose the right level of screening for your age and risk factors.",
+    ],
+    categoryId: "bc2",
+    authorDoctorId: "d2",
+    publishedAt: "2026-04-28",
+    metaTitle: "Why Annual Health Checkups Matter | Joy Family Clinic Blog",
+    metaDescription: "Discover why preventive health checkups matter at every age and how to choose the right package for your life stage.",
+  },
+  {
+    id: "b3",
+    slug: "dg-shipping-medical-exam-what-to-expect",
+    title: "DG Shipping Medical Examination: What to Expect",
+    excerpt: "A step-by-step walkthrough of the seafarer medical examination process and how to prepare.",
+    body: [
+      "The DG Shipping medical examination is a mandatory requirement for seafarers, conducted to MLC 2006 and STCW standards.",
+      "The process typically includes vision and hearing tests, blood pressure and ECG, blood and urine sample collection, chest X-ray, spirometry, and a final evaluation by the medical officer.",
+      "To prepare, bring a valid photo ID, your previous medical certificate if this is a renewal, and arrive well-rested — fatigue can affect blood pressure and vision test results.",
+    ],
+    categoryId: "bc3",
+    authorDoctorId: "d3",
+    publishedAt: "2026-03-15",
+    metaTitle: "DG Shipping Medical Examination: What to Expect | Joy Family Clinic Blog",
+    metaDescription: "A complete walkthrough of the DG Shipping seafarer medical examination process, requirements, and how to prepare.",
+  },
+];
+
+export type GalleryItem = {
+  id: string;
+  category: "Clinic" | "Doctors" | "Laboratory" | "Facilities" | "Events";
+  label: string;
+};
+
+export const galleryItems: GalleryItem[] = [
+  { id: "g1", category: "Clinic", label: "RECEPTION AREA" },
+  { id: "g2", category: "Clinic", label: "WAITING LOUNGE" },
+  { id: "g3", category: "Doctors", label: "CONSULTATION ROOM" },
+  { id: "g4", category: "Doctors", label: "DR. ALFRED BARNABAS AT WORK" },
+  { id: "g5", category: "Laboratory", label: "DIAGNOSTIC LAB" },
+  { id: "g6", category: "Laboratory", label: "SAMPLE COLLECTION DESK" },
+  { id: "g7", category: "Facilities", label: "PHARMACY COUNTER" },
+  { id: "g8", category: "Facilities", label: "CLINIC EXTERIOR" },
+  { id: "g9", category: "Events", label: "HEALTH AWARENESS CAMP" },
+  { id: "g10", category: "Events", label: "COMMUNITY VACCINATION DRIVE" },
+  { id: "g11", category: "Clinic", label: "CHILDREN'S CORNER" },
+  { id: "g12", category: "Facilities", label: "DG SHIPPING EXAMINATION ROOM" },
+];

@@ -1,0 +1,48 @@
+import type { Metadata } from "next";
+import { Raleway, Roboto, Inter } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import StickyMobileActionBar from "@/components/layout/StickyMobileActionBar";
+
+const raleway = Raleway({ subsets: ["latin"], variable: "--font-raleway", weight: ["600", "700", "800"] });
+const roboto = Roboto({ subsets: ["latin"], variable: "--font-roboto", weight: ["400", "500", "700"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["400", "500", "600"] });
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.joyfmsclinic.com"),
+  title: {
+    default: "Joy Family Multispeciality Clinic | Trusted Family Healthcare in Chennai",
+    template: "%s | Joy Family Multispeciality Clinic",
+  },
+  description:
+    "Premium multispeciality healthcare for families in Mogappair West, Chennai. Book appointments, lab tests, health packages & DG Shipping medical exams.",
+  keywords: [
+    "multispeciality clinic Chennai",
+    "family doctor Mogappair",
+    "ENT specialist Chennai",
+    "DG Shipping medical examination",
+    "health checkup packages Chennai",
+  ],
+  openGraph: {
+    title: "Joy Family Multispeciality Clinic",
+    description: "Premium, family-first multispeciality healthcare in Mogappair, Chennai.",
+    siteName: "Joy Family Multispeciality Clinic",
+    locale: "en_IN",
+    type: "website",
+  },
+  robots: { index: true, follow: true },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className={`${raleway.variable} ${roboto.variable} ${inter.variable} font-body`}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <StickyMobileActionBar />
+      </body>
+    </html>
+  );
+}
