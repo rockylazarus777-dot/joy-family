@@ -3,7 +3,7 @@ import { clinicInfo } from "@/lib/data/mockData";
 const stats = [
   { label: "Years of Experience", value: `${clinicInfo.yearsExperience}+` },
   { label: "Happy Patients", value: clinicInfo.happyPatients },
-  { label: "NABL Certified Lab", value: "Yes" },
+  { label: "NABL-Certified Lab Partner", value: "SSN Scans" },
   { label: "DG Shipping Approved", value: clinicInfo.dgShippingApprovalNo },
   { label: "Specialist Departments", value: "10+" },
 ];

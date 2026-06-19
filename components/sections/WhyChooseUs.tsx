@@ -1,7 +1,7 @@
 import { ShieldCheck, Users, Clock4, Stethoscope } from "lucide-react";
 
 const items = [
-  { icon: ShieldCheck, title: "Trusted & Certified", desc: "NABL-certified lab & DG Shipping approved examination centre." },
+  { icon: ShieldCheck, title: "Trusted & Certified", desc: "Diagnostic services through SSN Scans & Lab, our NABL-certified partner, and DG Shipping approved examination centre." },
   { icon: Users, title: "Family-Focused Care", desc: "Specialists for every age group, from infants to seniors." },
   { icon: Clock4, title: "Fast & Convenient", desc: "Quick appointments, home lab collection, and same-day reports." },
   { icon: Stethoscope, title: "Experienced Specialists", desc: "38+ years of combined clinical experience across departments." },

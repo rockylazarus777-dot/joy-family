@@ -37,25 +37,29 @@ export default function Navbar() {
               <Image
                 src="/images/logo/joy-logo.png"
                 alt="Joy Family Multispeciality Clinic"
-                width={220}
-                height={55}
+                width={820}
+                height={100}
                 priority
-                className="h-10 w-auto object-contain xl:h-12"
+                className="h-auto w-auto max-h-16 max-w-[820px] object-contain"
               />
             </Link>
           </div>
 
           {/* Desktop navigation — visible from lg (1024px) */}
-          <nav className="hidden flex-1 items-center justify-center gap-3 lg:flex xl:gap-5">
-            {navLinks.slice(0, 8).map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="whitespace-nowrap text-sm font-medium text-textPrimary transition-colors hover:text-primary"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden flex w-[420px] items-center justify-center gap-5 lg:flex xl:gap-7">
+            {navLinks
+              .filter((link) =>
+                ["Home", "About", "Doctors", "Services", "DG Shipping", "Gallery"].includes(link.label)
+              )
+              .map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="whitespace-nowrap text-sm font-medium text-textPrimary transition-colors hover:text-primary"
+                >
+                  {link.label}
+                </Link>
+              ))}
           </nav>
 
           {/* Phone + CTA — phone visible only from xl (1280px) to avoid crowding */}
@@ -100,7 +104,7 @@ export default function Navbar() {
               width={220}
               height={55}
               priority
-              className="h-10 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </Link>
           <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="text-primary">

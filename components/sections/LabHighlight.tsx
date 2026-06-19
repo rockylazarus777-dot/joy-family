@@ -9,7 +9,7 @@ export default function LabHighlight() {
         <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
           <Image
             src="/images/laboratory/lab.png"
-            alt="NABL-Certified Laboratory at Joy Family Clinic"
+            alt="SSN Scans & Lab — NABL-Certified Diagnostic Partner of Joy Family Clinic"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -17,14 +17,14 @@ export default function LabHighlight() {
         </div>
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-            <FlaskConical size={14} /> NABL Certified
+            <FlaskConical size={14} /> NABL-Certified Lab Partner
           </span>
           <h2 className="mt-4 font-heading text-2xl font-bold text-textPrimary md:text-3xl">
-            Precision Diagnostics You Can Trust
+            Diagnostic Services Through SSN Scans & Lab
           </h2>
           <p className="mt-3 text-textSecondary">
-            Our laboratory partner runs accredited tests with fast turnaround, backed by modern equipment and
-            stringent quality standards.
+            Joy Family Clinic is associated with SSN Scans & Lab, a NABL-certified diagnostic centre, providing
+            reliable laboratory investigations, accurate reporting, and convenient home sample collection services.
           </p>
           <ul className="mt-5 space-y-3 text-sm text-textPrimary">
             <li className="flex items-center gap-2"><Home size={18} className="text-accent" /> Home sample collection available</li>

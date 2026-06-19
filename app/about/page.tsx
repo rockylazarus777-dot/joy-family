@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import CtaBand from "@/components/sections/CtaBand";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
-import { clinicInfo, sectionImages } from "@/lib/data/mockData";
+import { clinicInfo } from "@/lib/data/mockData";
 import { HeartHandshake, ShieldCheck, Users, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -16,7 +15,7 @@ const values = [
   { icon: HeartHandshake, title: "Family-First Care", desc: "We treat every patient like family, with empathy and personal attention." },
   { icon: ShieldCheck, title: "Trusted Expertise", desc: "38 years of multispeciality medical experience across generations." },
   { icon: Users, title: "Community Focused", desc: `${clinicInfo.happyPatients} happy patients served across Mogappair and beyond.` },
-  { icon: Award, title: "Quality Standards", desc: "NABL-aligned diagnostics and DG Shipping approved medical examination centre." },
+  { icon: Award, title: "Quality Standards", desc: "Diagnostic services through SSN Scans & Lab, our NABL-certified partner, and a DG Shipping approved examination centre." },
 ];
 
 export default function AboutPage() {
@@ -30,27 +29,23 @@ export default function AboutPage() {
 
       <section className="px-4 py-16 md:px-8">
         <div className="mx-auto grid max-w-container gap-10 lg:grid-cols-2 lg:items-center">
-          {sectionImages.aboutTeam ? (
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-              <Image
-                src={sectionImages.aboutTeam}
-                alt="Joy Family Multispeciality Clinic team"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          ) : (
-            <ImagePlaceholder label="CLINIC TEAM PHOTO" ratio="4:3" />
-          )}
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+            <Image
+              src="/images/about/about team.png"
+              alt="Joy Family Multispeciality Clinic Team"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
           <div>
             <h2 className="font-heading text-2xl font-bold text-textPrimary md:text-3xl">Our Story</h2>
             <p className="mt-4 text-textSecondary">
               Joy Family Multispeciality Clinic was founded with a simple mission: to provide premium, accessible
               healthcare to every family in our community. For 38 years, we have grown from a single family-medicine
               practice into a full multispeciality clinic offering ENT, paediatrics, gynaecology, dental, dermatology,
-              orthopaedics, diabetes care, pain management, general surgery, an in-house diagnostic laboratory, a
-              pharmacy, and a DG Shipping approved seafarer medical examination centre.
+              orthopaedics, diabetes care, pain management, general surgery, diagnostic laboratory services through
+              our NABL-certified partner SSN Scans & Lab, a pharmacy, and a DG Shipping approved seafarer medical examination centre.
             </p>
             <p className="mt-4 text-textSecondary">
               Through generations of patients, our approach has remained the same: attentive specialists, transparent

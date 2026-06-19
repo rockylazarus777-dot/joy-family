@@ -12,24 +12,49 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", weight: ["40
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.joyfmsclinic.com"),
   title: {
-    default: "Joy Family Multispeciality Clinic | Trusted Family Healthcare in Chennai",
-    template: "%s | Joy Family Multispeciality Clinic",
+    default: "JOY FAMILY Multispecialty Clinic",
+    template: "%s | JOY FAMILY Multispecialty Clinic",
   },
   description:
-    "Premium multispeciality healthcare for families in Mogappair West, Chennai. Book appointments, lab tests, health packages & DG Shipping medical exams.",
+    "Comprehensive Healthcare for Every Generation. Expert Doctors, Laboratory Diagnostics, Pharmacy Services, Health Packages, and DG Shipping Medical Examinations.",
   keywords: [
     "multispeciality clinic Chennai",
     "family doctor Mogappair",
     "ENT specialist Chennai",
     "DG Shipping medical examination",
     "health checkup packages Chennai",
+    "NABL certified lab Chennai",
+    "SSN Scans diagnostic partner",
   ],
+  icons: {
+    icon: [
+      { url: "/images/fav.icon/favicon-64x64.png" },
+      { url: "/images/fav.icon/favicon.ico.png", sizes: "42x42", type: "image/png" },
+    ],
+    shortcut: "/images/fav.icon/favicon.ico",
+    apple: [{ url: "/images/fav.icon/apple-touch-icon.png" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
-    title: "Joy Family Multispeciality Clinic",
-    description: "Premium, family-first multispeciality healthcare in Mogappair, Chennai.",
-    siteName: "Joy Family Multispeciality Clinic",
+    title: "JOY FAMILY Multispecialty Clinic",
+    description: "Comprehensive Healthcare for Every Generation",
+    siteName: "JOY FAMILY Multispecialty Clinic",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/images/fav.icon/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JOY FAMILY Multispecialty Clinic — Comprehensive Healthcare for Every Generation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JOY FAMILY Multispecialty Clinic",
+    description: "Comprehensive Healthcare for Every Generation",
+    images: ["/images/fav.icon/twitter-image.jpg"],
   },
   robots: { index: true, follow: true },
 };

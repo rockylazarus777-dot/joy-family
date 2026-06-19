@@ -9,7 +9,7 @@ import LabBookingForm from "@/components/forms/LabBookingForm";
 
 export const metadata: Metadata = {
   title: "Laboratory & Diagnostics | Joy Family Multispeciality Clinic",
-  description: "NABL-aligned diagnostic laboratory with home sample collection and fast report turnaround at Joy Family Multispeciality Clinic, Mogappair.",
+  description: "Diagnostic tests at Joy Family Multispeciality Clinic are processed through SSN Scans & Lab, a NABL-certified partner, with home sample collection and fast report turnaround.",
 };
 
 const popularTests = [
@@ -24,7 +24,7 @@ const popularTests = [
 ];
 
 const features = [
-  { icon: FlaskConical, title: "NABL-Aligned Quality", desc: "Accredited testing standards for accurate, reliable reports." },
+  { icon: FlaskConical, title: "NABL-Certified Partner", desc: "Tests processed through SSN Scans & Lab, a NABL-certified diagnostic centre." },
   { icon: Home, title: "Home Collection", desc: "Sample pickup at your doorstep across Mogappair and nearby areas." },
   { icon: Clock, title: "Fast Turnaround", desc: "Most reports delivered within the same day." },
   { icon: FileCheck, title: "Digital Reports", desc: "Reports shared digitally via WhatsApp or email." },
@@ -35,7 +35,7 @@ export default function LaboratoryPage() {
     <>
       <PageHero
         title="Laboratory & Diagnostics"
-        subtitle="Accurate diagnostic testing with home collection and fast report turnaround."
+        subtitle="Diagnostic services in partnership with SSN Scans & Lab, a NABL-certified centre, with home collection and fast turnaround."
         breadcrumbs={[{ label: "Laboratory" }]}
       />
 
