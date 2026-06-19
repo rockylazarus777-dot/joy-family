@@ -28,11 +28,12 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: "/images/fav.icon/favicon-64x64.png" },
-      { url: "/images/fav.icon/favicon.ico.png", sizes: "42x42", type: "image/png" },
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
     ],
-    shortcut: "/images/fav.icon/favicon.ico",
-    apple: [{ url: "/images/fav.icon/apple-touch-icon.png" }],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
   openGraph: {
