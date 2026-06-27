@@ -13,7 +13,7 @@ import CtaBand from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "38 years of trusted, family-first multispeciality healthcare in Mogappair, Chennai. Book doctor appointments, lab tests, health packages and DG Shipping medical exams.",
+  description: "38 years of trusted, family-first multispeciality healthcare in Villivakkam, Chennai. Book doctor appointments, lab tests, health packages and DG Shipping medical exams.",
 };
 
 export default function HomePage() {

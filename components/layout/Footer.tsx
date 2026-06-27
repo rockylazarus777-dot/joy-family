@@ -16,7 +16,7 @@ export default function Footer() {
         <div>
           <h4 className="mb-6 font-heading text-xl font-bold">Quick Links</h4>
           <ul className="space-y-2 text-sm text-white/80">
-            {navLinks.slice(0, 6).map((link) => (
+            {navLinks.filter(l => ['/', '/about', '/doctors', '/services', '/laboratory', '/health-packages', '/contact'].includes(l.href)).map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="hover:text-accent">
                   {link.label}

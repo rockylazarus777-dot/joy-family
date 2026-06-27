@@ -70,7 +70,7 @@ export const doctors: Doctor[] = [
     departmentId: "family-medicine",
     experienceYears: 35,
     languages: ["English", "Tamil"],
-    bio: "Dr. Hannah Alfred has been the trusted family physician for thousands of households in Mogappair for over three decades, offering attentive, continuous care across every life stage.",
+    bio: "Dr. Hannah Alfred has been the trusted family physician for thousands of households in Villivakkam for over three decades, offering attentive, continuous care across every life stage.",
     education: ["MBBS — Stanley Medical College", "MD — General Medicine"],
     conditionsTreated: ["Fever & infections", "Hypertension", "Diabetes", "Thyroid disorders", "Preventive checkups"],
     availability: [
@@ -137,7 +137,7 @@ export const services: Service[] = [
       { q: "When should I see an ENT specialist?", a: "If you experience persistent ear pain, hearing changes, chronic sinus issues, or recurring throat infections." },
       { q: "Is hearing testing available on-site?", a: "Yes, basic hearing assessments are available during your consultation." },
     ],
-    metaTitle: "ENT Care in Mogappair, Chennai | Joy Family Clinic",
+    metaTitle: "ENT Care in Villivakkam, Chennai | Joy Family Clinic",
     metaDescription: "Expert ENT diagnosis and treatment for sinusitis, hearing loss, vertigo and more, led by a specialist with 38 years of experience.",
     image: "/images/services/ent care.png",
   },
@@ -150,7 +150,7 @@ export const services: Service[] = [
     faqs: [
       { q: "Can the whole family see the same doctor?", a: "Yes, our family medicine specialist treats patients of all ages." },
     ],
-    metaTitle: "Family Medicine Doctor in Mogappair | Joy Family Clinic",
+    metaTitle: "Family Medicine Doctor in Villivakkam | Joy Family Clinic",
     metaDescription: "Trusted family medicine care for everyday illness, chronic disease management and preventive checkups in Chennai.",
     image: "/images/services/family.png",
   },
@@ -172,7 +172,7 @@ export const services: Service[] = [
     procedures: ["Routine checkups", "Vaccination schedules", "Growth monitoring"],
     benefits: ["Child-friendly environment", "Experienced paediatric care"],
     faqs: [{ q: "Do you provide vaccination services?", a: "Yes, we follow the standard immunisation schedule for children." }],
-    metaTitle: "Paediatric Care in Mogappair, Chennai | Joy Family Clinic",
+    metaTitle: "Paediatric Care in Villivakkam, Chennai | Joy Family Clinic",
     metaDescription: "Gentle, expert paediatric care including vaccination, growth monitoring and childhood illness treatment.",
     image: "/images/services/paediatric.png",
   },
@@ -184,7 +184,7 @@ export const services: Service[] = [
     benefits: ["Private, comfortable consultations", "Female-focused care team"],
     faqs: [{ q: "Do you offer prenatal checkups?", a: "Yes, prenatal consultations and monitoring are available." }],
     metaTitle: "Women's Health & Gynaecology in Chennai | Joy Family Clinic",
-    metaDescription: "Comprehensive gynaecological and maternal healthcare for women of all ages in Mogappair, Chennai.",
+    metaDescription: "Comprehensive gynaecological and maternal healthcare for women of all ages in Villivakkam, Chennai.",
     image: "/images/services/women.png",
   },
  
@@ -206,7 +206,7 @@ export const services: Service[] = [
     procedures: ["Joint assessment", "X-ray referral", "Physiotherapy guidance"],
     benefits: ["Comprehensive bone & joint care", "Sports injury expertise"],
     faqs: [{ q: "Do you treat sports injuries?", a: "Yes, including sprains, strains, and minor fractures." }],
-    metaTitle: "Orthopaedic Care in Mogappair, Chennai | Joy Family Clinic",
+    metaTitle: "Orthopaedic Care in Villivakkam, Chennai | Joy Family Clinic",
     metaDescription: "Expert care for fractures, arthritis, sports injuries and chronic joint pain.",
     image: "/images/services/orthopaedic.png",
   },
@@ -324,7 +324,7 @@ export const clinicInfo = {
   yearsExperience: 38,
   happyPatients: "6,930+",
   dgShippingApprovalNo: "TN/CH/43/2022",
-  mapEmbedUrl: "https://maps.google.com/maps?q=Mogappair%20West%2C%20Chennai&output=embed",
+  mapEmbedUrl: "https://maps.google.com/maps?q=Villivakkam%20West%2C%20Chennai&output=embed",
 };
 
 // Section-level images — update each path when the image is uploaded
@@ -381,7 +381,7 @@ export const heroSlides: HeroSlide[] = [
 
 export const faqs = [
   { q: "Do I need to book an appointment in advance?", a: "Walk-ins are welcome, but booking online or via WhatsApp guarantees you a fixed time slot and shorter wait." },
-  { q: "Do you offer home collection for lab tests?", a: "Yes, home collection is available for most lab tests across Mogappair and nearby areas." },
+  { q: "Do you offer home collection for lab tests?", a: "Yes, home collection is available for most lab tests across Villivakkam and nearby areas." },
   { q: "Is the DG Shipping medical examination approved?", a: `Yes, our centre holds DG Shipping Approval No. ${"TN/CH/43/2022"} and follows MLC 2006 / STCW standards.` },
   { q: "What are your clinic hours?", a: "Monday to Saturday, 9:00 AM – 1:00 PM and 6:00 PM – 9:00 PM. Closed on Sundays." },
   { q: "Can I consult a specialist without a referral?", a: "Yes, you can directly book with any of our specialists without a referral." },

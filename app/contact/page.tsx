@@ -6,7 +6,7 @@ import { clinicInfo } from "@/lib/data/mockData";
 
 export const metadata: Metadata = {
   title: "Contact Us | Joy Family Multispeciality Clinic",
-  description: "Get in touch with Joy Family Multispeciality Clinic in Mogappair, Chennai — call, WhatsApp, or send us a message.",
+  description: "Get in touch with Joy Family Multispeciality Clinic in Villivakkam, Chennai — call, WhatsApp, or send us a message.",
 };
 
 export default function ContactPage() {

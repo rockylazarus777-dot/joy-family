@@ -25,7 +25,7 @@ const popularTests = [
 
 const features = [
   { icon: FlaskConical, title: "NABL-Certified Partner", desc: "Tests processed through SSN Scans & Lab, a NABL-certified diagnostic centre." },
-  { icon: Home, title: "Home Collection", desc: "Sample pickup at your doorstep across Mogappair and nearby areas." },
+  { icon: Home, title: "Home Collection", desc: "Sample pickup at your doorstep across Villivakkam and nearby areas." },
   { icon: Clock, title: "Fast Turnaround", desc: "Most reports delivered within the same day." },
   { icon: FileCheck, title: "Digital Reports", desc: "Reports shared digitally via WhatsApp or email." },
 ];

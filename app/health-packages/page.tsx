@@ -7,7 +7,7 @@ import PackageEnquiryForm from "@/components/forms/PackageEnquiryForm";
 
 export const metadata: Metadata = {
   title: "Health Checkup Packages | Joy Family Multispeciality Clinic",
-  description: "Affordable, comprehensive health checkup packages for every age group at Joy Family Multispeciality Clinic, Mogappair.",
+  description: "Affordable, comprehensive health checkup packages for every age group at Joy Family Multispeciality Clinic, Villivakkam.",
 };
 
 export default function HealthPackagesPage() {

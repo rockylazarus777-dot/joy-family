@@ -9,7 +9,7 @@ import { clinicInfo, sectionImages } from "@/lib/data/mockData";
 
 export const metadata: Metadata = {
   title: "In-House Pharmacy | Joy Family Multispeciality Clinic",
-  description: "Genuine medicines, fast dispensing and home delivery from our in-house pharmacy at Joy Family Multispeciality Clinic, Mogappair.",
+  description: "Genuine medicines, fast dispensing and home delivery from our in-house pharmacy at Joy Family Multispeciality Clinic, Villivakkam.",
 };
 
 const features = [

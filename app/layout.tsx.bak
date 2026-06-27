@@ -16,17 +16,17 @@ export const metadata: Metadata = {
     template: "%s | Joy Family Multispeciality Clinic",
   },
   description:
-    "Premium multispeciality healthcare for families in Mogappair West, Chennai. Book appointments, lab tests, health packages & DG Shipping medical exams.",
+    "Premium multispeciality healthcare for families in Villivakkam West, Chennai. Book appointments, lab tests, health packages & DG Shipping medical exams.",
   keywords: [
     "multispeciality clinic Chennai",
-    "family doctor Mogappair",
+    "family doctor Villivakkam",
     "ENT specialist Chennai",
     "DG Shipping medical examination",
     "health checkup packages Chennai",
   ],
   openGraph: {
     title: "Joy Family Multispeciality Clinic",
-    description: "Premium, family-first multispeciality healthcare in Mogappair, Chennai.",
+    description: "Premium, family-first multispeciality healthcare in Villivakkam, Chennai.",
     siteName: "Joy Family Multispeciality Clinic",
     locale: "en_IN",
     type: "website",

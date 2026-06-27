@@ -8,13 +8,13 @@ import { HeartHandshake, ShieldCheck, Users, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Joy Family Multispeciality Clinic",
-  description: "38 years of trusted, family-first multispeciality healthcare in Mogappair, Chennai. Learn about our mission, values and team.",
+  description: "38 years of trusted, family-first multispeciality healthcare in Villivakkam, Chennai. Learn about our mission, values and team.",
 };
 
 const values = [
   { icon: HeartHandshake, title: "Family-First Care", desc: "We treat every patient like family, with empathy and personal attention." },
   { icon: ShieldCheck, title: "Trusted Expertise", desc: "38 years of multispeciality medical experience across generations." },
-  { icon: Users, title: "Community Focused", desc: `${clinicInfo.happyPatients} happy patients served across Mogappair and beyond.` },
+  { icon: Users, title: "Community Focused", desc: `${clinicInfo.happyPatients} happy patients served across Villivakkam and beyond.` },
   { icon: Award, title: "Quality Standards", desc: "Diagnostic services through SSN Scans & Lab, our NABL-certified partner, and a DG Shipping approved examination centre." },
 ];
 
@@ -23,7 +23,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Joy Family Multispeciality Clinic"
-        subtitle="38 years of trusted, family-first healthcare in the heart of Mogappair, Chennai."
+        subtitle="38 years of trusted, family-first healthcare in the heart of Villivakkam, Chennai."
         breadcrumbs={[{ label: "About" }]}
       />
 
