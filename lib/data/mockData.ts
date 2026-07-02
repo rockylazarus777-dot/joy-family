@@ -324,7 +324,7 @@ export const clinicInfo = {
   yearsExperience: 38,
   happyPatients: "6,930+",
   dgShippingApprovalNo: "TN/CH/43/2022",
-  mapEmbedUrl: "https://maps.google.com/maps?q=Villivakkam%20West%2C%20Chennai&output=embed",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15543.544774800099!2d80.19668264060245!3d13.106395495815786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265010ffa2ca1%3A0x38cb4e27fae02b56!2sJoy%20Family%20Multispeciality%20Clinic!5e0!3m2!1sen!2sin!4v1782978203526!5m2!1sen!2sin",
 };
 
 // Section-level images — update each path when the image is uploaded

@@ -51,9 +51,12 @@ export default function ContactPage() {
             <div className="mt-6 overflow-hidden rounded-xl border border-border">
               <iframe
                 src={clinicInfo.mapEmbedUrl}
-                title="Clinic location map"
+                title="Joy Family Multispeciality Clinic location map"
                 className="h-72 w-full"
+                style={{ border: 0 }}
                 loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </div>
